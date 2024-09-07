@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { context } from "../../context";
 import { Button } from "../button/Button";
 import { Container } from "../container/Container";
-import { redirect, Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 
 interface QuestionProps {
   nextQuestion: () => void;
