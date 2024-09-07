@@ -1,0 +1,14 @@
+.container {
+  background: #1d1e22;
+  border-radius: 15px;
+  padding: 3.75em 5.625em;
+  width: 50em;
+  transition: height 0.3s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 2 * 0.625em);
+    padding: 1.875em 1.25em;
+    margin-left: 0.625em;
+    margin-right: 0.625em;
+  }
+}

@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625em;
+}
+
+.heading {
+  margin-bottom: 0.6em;
+  max-width: 10em;
+}
+
+.input {
+  font-size: 1.125rem;
+  padding: 1em;
+  color: #7d808a;
+  background-color: #13151c;
+  border: 1px solid #33353b;
+  border-radius: 5px;
+  font-family: "Gotham";
+  font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}

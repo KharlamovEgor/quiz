@@ -1,0 +1,47 @@
+.dots {
+  display: flex;
+  gap: 0.625em;
+
+  @media (max-width: 768px) {
+    gap: 0.5em;
+  }
+}
+
+.dot {
+  background-color: #dece92;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-family: "Gotham";
+  font-weight: 500;
+
+  max-width: 44px;
+  max-height: 44px;
+
+  padding: 0.625em 1.35em;
+
+  transition: max-width 1.2s linear;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}
+
+.dot span {
+  display: block;
+  font-size: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.dot.current {
+  max-width: 1000px;
+}
+
+.dot.current span {
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}

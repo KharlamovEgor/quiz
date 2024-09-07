@@ -1,0 +1,31 @@
+.heading {
+  font-family: "Alumni Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.375rem;
+  color: #dece92;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 1.5625rem;
+  }
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.big {
+  font-size: 3.4375rem;
+  color: white;
+  margin-bottom: 0.55em;
+
+  @media (max-width: 768px) {
+    font-size: 2.1875rem;
+  }
+}
