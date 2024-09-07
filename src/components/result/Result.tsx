@@ -24,7 +24,9 @@ export function Result({ results, texts, blocks }: ResultProps) {
             )}
           >
             <div className={styles.score}>
-              <span>{result} баллов</span>
+              <span>
+                {result} {result == 3 || result == 4 ? "балла" : "баллов"}
+              </span>
               <Heading>{blocks[index].slice(9)}</Heading>
             </div>
             <p>{texts[index][result]}</p>

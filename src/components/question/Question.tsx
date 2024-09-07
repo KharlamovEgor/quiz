@@ -69,6 +69,7 @@ export function Question({
       </form>
       <div className={styles.buttons}>
         <Button
+          light
           onClick={() => {
             prevQuestion();
             setAnswer(null);
@@ -82,7 +83,6 @@ export function Question({
           </Link>
         ) : (
           <Button
-            light
             onClick={() => {
               if (answer == null) return;
               nextQuestion();
