@@ -17,6 +17,7 @@ export function Diagram({ blocks, scores, className }: Props) {
         responsive: true,
         scales: {
           r: {
+            max: 9,
             ticks: {
               display: false,
             },
