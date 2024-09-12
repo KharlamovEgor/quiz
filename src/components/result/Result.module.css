@@ -60,3 +60,14 @@
 .diagram {
   margin-bottom: 2.5em;
 }
+
+.end {
+  font-size: 1.125rem;
+  color: white;
+  font-weight: 500;
+  font-family: "Gotham";
+}
+
+.end :where(p, ul) {
+  margin-bottom: 1.7em;
+}

@@ -3,6 +3,7 @@ import { Container } from "../container/Container";
 import { Heading } from "../heading/Heading";
 import classNames from "classnames";
 import { Diagram } from "../diagram/Diagram";
+import { Button } from "../button/Button";
 
 interface ResultProps {
   results: number[];
@@ -49,6 +50,27 @@ export function Result({ results, texts, blocks }: ResultProps) {
           </div>
         );
       })}
+      <div className={styles.end}>
+        <p>
+          Поздравляем с успешным завершением теста! Теперь приглашаем вас в наш
+          телеграм-канал, где вы сможете погрузиться в мир ораторского
+          мастерства. Внутри вас ждут:
+        </p>
+        <ul>
+          <li>Эксклюзивные обучающие видеоуроки</li>
+          <li>
+            Моя авторская книга с практическими заданиями для
+            самосовершенствования
+          </li>
+          <li>
+            Полная информация о предстоящем курсе Присоединяйтесь, чтобы сделать
+            каждый шаг на пути к мастерству еще увереннее и ярче
+          </li>
+        </ul>
+        <a href="https://t.me/smitkurs_bot">
+          <Button>Присоединиться</Button>
+        </a>
+      </div>
     </Container>
   );
 }
