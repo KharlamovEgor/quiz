@@ -12,13 +12,6 @@ interface ResultProps {
 
 export function Result({ results, texts, blocks }: ResultProps) {
   const colors = ["#DE9292", "#C692DE", "#929EDE", "#AADE92", "#DECE92"];
-  const images = [
-    "/blocks/1.png",
-    "/blocks/2.png",
-    "/blocks/3.png",
-    "/blocks/4.png",
-    "/blocks/5.png",
-  ];
 
   return (
     <Container className={styles.margins}>
@@ -44,7 +37,6 @@ export function Result({ results, texts, blocks }: ResultProps) {
                 {blocks[index].slice(9)}
               </Heading>
             </div>
-            <img src={images[index]} />
             <p>{texts[index][result]}</p>
           </div>
         );

@@ -2,6 +2,7 @@
   display: flex;
   gap: 1.25em;
   align-items: center;
+  justify-content: center;
 }
 
 .score span {
@@ -23,10 +24,15 @@
   flex-direction: column;
   gap: 1.25em;
   margin-bottom: 1.875em;
+  background-color: #1d1e22;
 }
 
 .result:last-child {
   margin-bottom: 0;
+}
+
+.result img {
+  mix-blend-mode: lighten;
 }
 
 .result p {
@@ -49,4 +55,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+}
+
+.diagram {
+  margin-bottom: 2.5em;
 }
