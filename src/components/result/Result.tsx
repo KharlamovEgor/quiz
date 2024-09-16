@@ -26,7 +26,12 @@ export function Result({ results, texts, blocks }: ResultProps) {
       <Heading center big>
         РЕЗУЛЬТАТЫ
       </Heading>
-      <Diagram className={styles.diagram} blocks={blocks} scores={results} />
+      <Diagram
+        className={styles.diagram}
+        blocks={blocks}
+        scores={results}
+        colors={colors}
+      />
       {results.map((result, index) => {
         return (
           <div
@@ -41,9 +46,7 @@ export function Result({ results, texts, blocks }: ResultProps) {
               <span>
                 {result} {result == 3 || result == 4 ? "балла" : "баллов"}
               </span>
-              <Heading style={{ color: colors[index] }}>
-                {blocks[index].slice(9)}
-              </Heading>
+              <Heading color={colors[index]}>{blocks[index].slice(9)}</Heading>
             </div>
             <img src={images[index]} />
             <p>{texts[index][result]}</p>

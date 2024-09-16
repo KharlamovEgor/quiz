@@ -1,20 +1,42 @@
-/*.circleContainer img {*/
-/*  display: block;*/
-/*  position: absolute;*/
-/**/
-/*  left: 50%;*/
-/*  top: 50%;*/
-/*}*/
-/**/
-/*.circleContainer img:nth-of-type(1) {*/
-/*  transform: rotate(255deg) translate(200px) rotate(-255deg);*/
-/*  margin: -80px;*/
-/*}*/
-
-.circleContainer {
-  max-width: 400px;
+.canvas {
+  min-width: 400px;
   margin-left: auto;
   margin-right: auto;
 
-  position: relative;
+  @media screen and (max-width: 768px) {
+    min-width: auto;
+  }
+}
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+  margin-top: 2em;
+
+  max-width: 28em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colorDesc {
+  font-family: "Gotham";
+  color: white;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1;
+  gap: 0.5em;
+  white-space: nowrap;
+
+  display: flex;
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+  }
+}
+
+.color {
+  width: 2em;
+  border-radius: 10%;
 }

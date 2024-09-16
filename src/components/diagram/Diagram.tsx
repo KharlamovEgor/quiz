@@ -5,9 +5,10 @@ import { useLayoutEffect, useRef } from "react";
 interface Props {
   blocks: string[];
   scores: number[];
+  colors: string[];
   className?: string;
 }
-export function Diagram({ blocks, scores, className }: Props) {
+export function Diagram({ blocks, colors, scores, className }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useLayoutEffect(() => {
@@ -48,13 +49,7 @@ export function Diagram({ blocks, scores, className }: Props) {
           {
             data: scores,
             borderColor: "#fff",
-            backgroundColor: [
-              "#DE9292",
-              "#C692DE",
-              "#929EDE",
-              "#AADE92",
-              "#DECE92",
-            ],
+            backgroundColor: colors,
           },
         ],
       },
@@ -67,14 +62,20 @@ export function Diagram({ blocks, scores, className }: Props) {
 
   return (
     <div className={classNames(styles.circleContainer, className)}>
-      {
-        //<img src="/block-images/УВЕРЕННОСТЬ.png" alt="" />
-        //<img src="/block-images/КОММУНИКАЯ.png" alt="" />
-        //<img src="/block-images/ГОЛОС.png" alt="" />
-        //<img src="/block-images/СЦЕНА.png" alt="" />
-        //<img src="/block-images/СЛОВА.png" alt="" />
-      }
       <canvas className={styles.canvas} ref={ref}></canvas>
+      <div className={styles.description}>
+        {colors.map((color, index) => {
+          return (
+            <div key={color} className={styles.colorDesc}>
+              <div
+                className={styles.color}
+                style={{ backgroundColor: color }}
+              />
+              <span> — {blocks[index].slice(9)}</span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
