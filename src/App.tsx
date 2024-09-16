@@ -1,6 +1,7 @@
+import styles from "./App.module.css";
 import { useState } from "react";
 import { data } from "./data";
-import { Question, Dots } from "./components";
+import { Question, Dots, Heading } from "./components";
 
 export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -18,6 +19,9 @@ export default function App() {
 
   return (
     <main className="main">
+      <Heading center className={styles.heading} color="black">
+        Ответь на 15 вопросов и получи получи анализ твоей уверенности и речи
+      </Heading>
       <Dots blocks={blocks} current={questions[currentQuestion].block!} />
       <Question
         data={questions[currentQuestion]}

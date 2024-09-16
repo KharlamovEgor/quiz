@@ -47,6 +47,10 @@
   }
 }
 
+.warning {
+  color: #dece92;
+}
+
 .margins {
   margin-top: 10em;
   margin-bottom: 10em;

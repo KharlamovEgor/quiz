@@ -66,6 +66,15 @@ export function Diagram({ blocks, scores, className }: Props) {
   }, []);
 
   return (
-    <canvas className={classNames(styles.canvas, className)} ref={ref}></canvas>
+    <div className={classNames(styles.circleContainer, className)}>
+      {
+        //<img src="/block-images/УВЕРЕННОСТЬ.png" alt="" />
+        //<img src="/block-images/КОММУНИКАЯ.png" alt="" />
+        //<img src="/block-images/ГОЛОС.png" alt="" />
+        //<img src="/block-images/СЦЕНА.png" alt="" />
+        //<img src="/block-images/СЛОВА.png" alt="" />
+      }
+      <canvas className={styles.canvas} ref={ref}></canvas>
+    </div>
   );
 }

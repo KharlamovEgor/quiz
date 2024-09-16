@@ -9,12 +9,14 @@ interface HeadingProps
   > {
   center?: boolean;
   big?: boolean;
+  color?: string;
 }
 
 export function Heading({
   children,
   className,
   center,
+  color,
   big,
   ...props
 }: HeadingProps) {
@@ -25,6 +27,7 @@ export function Heading({
         [styles.big]: big,
       })}
       {...props}
+      style={{ color: color }}
     >
       {children}
     </h3>
