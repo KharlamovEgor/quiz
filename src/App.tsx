@@ -20,7 +20,7 @@ export default function App() {
   return (
     <main className="main">
       <Heading center className={styles.heading} color="black">
-        Ответь на 15 вопросов и получи получи анализ твоей уверенности и речи
+        Ответь на 15 вопросов и получи получи анализ cвоей уверенности и речи
       </Heading>
       <Dots blocks={blocks} current={questions[currentQuestion].block!} />
       <Question
